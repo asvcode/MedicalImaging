@@ -4,7 +4,7 @@
 ![](https://github.com/fastai/fastpages/workflows/GH-Pages%20Status/badge.svg)
 
 
-[![](https://img.shields.io/static/v1?label=Medical%20Imaging%20Blog&message=link&labelColor=2f363d&color=blue&style=flat&logo=github&logoColor=959da5)](https://asvcode.github.io/MedicalImaging/)
+[![](https://img.shields.io/static/v1?label=Medical%20Imaging%20Tutorial&message=link&labelColor=2f363d&color=blue&style=flat&logo=github&logoColor=959da5)](https://asvcode.github.io/MedicalImaging/)
 
 [//]: # (END OF BADGES SECTION)
 

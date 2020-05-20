@@ -1,7 +1,7 @@
 [//]: # (BADGES SECTION: change `fastai` with your GitHub username and `fastpages` with the name of your repo)
 
-![](https://github.com/fastai/fastpages/workflows/CI/badge.svg)
-![](https://github.com/fastai/fastpages/workflows/GH-Pages%20Status/badge.svg)
+![](https://github.com/asvcode/MedicalImaging/workflows/CI/badge.svg)
+![](https://github.com/asvcode/MedicalImaging/workflows/GH-Pages%20Status/badge.svg)
 
 
 [![](https://img.shields.io/static/v1?label=Medical%20Imaging%20Tutorial&message=link&labelColor=2f363d&color=blue&style=flat&logo=github&logoColor=959da5)](https://asvcode.github.io/MedicalImaging/)

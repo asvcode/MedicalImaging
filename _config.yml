@@ -2,30 +2,30 @@
 #
 # This config file is meant for settings that affect your whole blog.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 
-title: fastpages
-description: An easy to use blogging platform with support for Jupyter Notebooks.
-github_username: fastai
+title: Medical Imaging
+description: Tutorials to help with using DICOM images for medical imaging.
+github_username: asvcode
 # you can comment the below line out if your repo name is not different than your baseurl
-github_repo: "fastpages"
+github_repo: "MedicalImaging"
 
 # OPTIONAL: override baseurl and url if using a custom domain
-# Note: leave out the trailing / from this value. 
-url: "https://fastpages.fast.ai" # the base hostname & protocol for your site, e.g. http://example.com
+# Note: leave out the trailing / from this value.
+url: "https://asvcode.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 ###########################################################
 #########  Special Instructions for baseurl ###############
 #
 #### Scenario One: If you do not have a Custom Domain #####
 #    -  if you are not using a custom domain, the baseurl *must* be set to your repo name
-# 
+#
 ####  Scenario Two: If you have a Custom Domain #####
 # 1. If your domain does NOT have a subpath, this leave this value as ""
-# 2. If your domain does have a subpath, you must preceed the value with a / and NOT have a / at the end.  
-#      For example: 
+# 2. If your domain does have a subpath, you must preceed the value with a / and NOT have a / at the end.
+#      For example:
 #           "" is valid
 #           "/blog"        is valid
 #            "/blog/site/" is invalid  ( / at the end)
@@ -34,16 +34,16 @@ url: "https://fastpages.fast.ai" # the base hostname & protocol for your site, e
 #
 # 3. You must replace the parameter `baseurl` in _action_files/settings.ini with the same value as you set here but WITHOUT QUOTES.
 #
-baseurl: "" # the subpath of your site, e.g. "/blog".
+baseurl: "/MedicalImaging" # the subpath of your site, e.g. "/blog".
 
 # Github and twitter are optional:
 minima:
   social_links:
-    twitter: fastdotai
-    github: fastai
+    twitter: _AVirdee
+    github: asvcode
 
 # Set this to true to get LaTeX math equation support
-use_math: 
+use_math:
 
 # Set this to true to display the summary of your blog post under your title on the Home page.
 show_description: true
@@ -55,7 +55,7 @@ show_image: false
 show_tags: true
 
 # Add your Google Analytics ID here if you have one and want to use it
-google_analytics: UA-57531313-5
+google_analytics: UA-78184009-1
 
 exclude:
   - docker-compose.yml

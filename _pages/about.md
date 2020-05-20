@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Amrit Virdee
+title: About
 permalink: /about/
 ---
 

@@ -90,13 +90,25 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><p>This site is built with <a href="https://github.com/fastai/fastpages">fastpages</a>, An easy to use blogging platform with extra features for Jupyter Notebooks.</p>
+        <div class="home"><h3 id="what-are-dicoms">What are DICOMs?</h3>
 
-<p><img src="/MedicalImaging/images/diagram.png" alt="" title="https://github.com/fastai/fastpages" /></p>
+<p><strong>DICOM</strong>(<strong>D</strong>igital <strong>I</strong>maging and <strong>CO</strong>mmunications in <strong>M</strong>edicine) is the de-facto standard that establishes rules that allow medical images(X-Ray, MRI, CT) and associated information to be exchanged between imaging equipment from different vendors, computers, and hospitals. The DICOM format provides a suitable means that meets <a href="https://www.himss.org/interoperability-and-health-information-exchange">health infomation exchange</a> (HIE) standards for transmision of health related data among facilites and HL7 standards which is the messaging standard that enables clinical applications to exchange data.</p>
 
-<p><a href="https://github.com/fastai/fastpages">fastpages</a> automates the process of creating blog posts via GitHub Actions, so you don’t have to fuss with conversion scripts.  A full list of features can be found on <a href="https://github.com/fastai/fastpages">GitHub</a>.</p>
+<p align="center">
+  <img width="300" height="300" src="static/Dicom_wf.PNG" />
+</p>
 
-<p>You can edit the <code class="highlighter-rouge">index.html</code> file to change this content.</p>
+<p>DICOM files typically have a .dcm extension and provides a means of storing data in seperate <strong>‘tags’</strong> such as patient information as well as image/pixel data. A DICOM file consists of a header and image data sets packed into a single file. The information within the header is organized as a constant and standardized series of tags. By extracting data from these tags one can access important information regarding the patient demographics, study parameters, etc</p>
+
+<p>16 bit DICOM images have values ranging from -32768 to 32768 while 8-bit greyscale images store values from 0 to 255. The value ranges in DICOM images are useful as they correlate with the <a href="https://en.wikipedia.org/wiki/Hounsfield_scale">Hounsfield Scale</a> which is a quantitative scale for describing radiodensity</p>
+
+<p align="center">
+  Parts of a DICOM
+</p>
+
+<p align="center">
+  <img width="208" height="388" src="static/dicom_.PNG" />
+</p>
 
 <h1 id="posts">Posts</h1>
 

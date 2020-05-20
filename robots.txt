@@ -1,1 +1,1 @@
-Sitemap: https://fastpages.fast.ai/sitemap.xml
+Sitemap: https://asvcode.github.io/MedicalImaging/sitemap.xml

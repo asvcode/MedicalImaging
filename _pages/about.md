@@ -1,8 +1,10 @@
 ---
 layout: page
-title: About Me
+title: Amrit Virdee
 permalink: /about/
 ---
+
+I am a prior Insight Data Science AI Fellow, pharmacist with a Masters in Health Informatics, presented and moderated at HIMSS, pitched at AWS Startups and Startup SanDiego and proud father of 2.
 
 [![](https://img.shields.io/static/v1?label=LinkedIn&message=link&labelColor=2f363d&color=blue&style=flat&logo=linkedin&logoColor=959da5)](https://www.linkedin.com/in/amritvirdee/)
 

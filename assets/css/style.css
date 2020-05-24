@@ -335,11 +335,27 @@ table td { border: 1px solid #e8e8e8; }
 /*--- IMPORT STYLES FOR FASTPAGES ---*/
 .post img { display: block; vertical-align: top; margin-left: auto; margin-right: auto; }
 
-img.emoji { display: inline !important; vertical-align: baseline !important; }
-
 .post figcaption { text-align: center; font-size: .8rem; font-style: italic; color: light-grey; }
 
-.page-content { -webkit-font-smoothing: antialiased !important; text-rendering: optimizeLegibility !important; font-family: "Segoe UI", SegoeUI, Roboto, "Segoe WP", "Helvetica Neue", "Helvetica", "Tahoma", "Arial", sans-serif !important; }
+.language-python + .language-plaintext { border-left: 1px solid grey; margin-left: 1rem !important; }
+
+[class^="language-"]:not(.language-plaintext) pre, [class^="language-"]:not(.language-plaintext) code { background-color: #ffffff !important; color: #c2c265; }
+
+.language-python + .language-plaintext code { background-color: white !important; }
+
+.language-python + .language-plaintext pre { background-color: white !important; }
+
+.input_area pre, .input_area div { margin-bottom: 2rem !important; margin-top: 1.5rem !important; padding-bottom: 0 !important; padding-top: 0 !important; background: #ffffff !important; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: Menlo, Monaco, Consolas, "Lucida Console", Roboto, Ubuntu, monospace; border-radius: 5px; font-size: 100%; }
+
+.output_area pre, .output_area div { margin-bottom: 1rem !important; margin-top: 1rem !important; padding-bottom: 0 !important; padding-top: 0 !important; background: #a1e2f7 !important; }
+
+.input_area pre { border-left: 1px solid lightcoral; }
+
+.output_area pre { border-left: 1px solid grey; margin-left: 1rem !important; }
+
+.code_cell table { width: auto; }
+
+.page-content { -webkit-font-smoothing: antialiased !important; text-rendering: optimizeLegibility !important; font-family: "Segoe UI", SegoeUI, Roboto, "Segoe WP", "Helvetica Neue", "Helvetica", "Tahoma", "Arial", sans-serif !important; background: #a1e2f7 !important; }
 
 .post-content p, .post-content li { font-size: 20px; color: #515151; }
 
@@ -355,15 +371,47 @@ p { margin-top: 1rem !important; margin-bottom: 1rem !important; }
 
 h1, h2, h3, h4 { font-weight: normal !important; margin-bottom: 0.5rem !important; }
 
-h1 code, h2 code, h3 code, h4 code { font-size: 100%; }
-
 pre { margin-bottom: 1.5rem !important; }
 
 .post-title { margin-top: .5rem !important; }
 
 li h3, li h4 { margin-top: .05rem !important; margin-bottom: .05rem !important; }
 
-li .post-meta-description { color: #585858; font-size: 15px; margin-top: .05rem !important; margin-bottom: .05rem !important; }
+li .post-meta-description { color: #646464; font-size: 15px; margin-top: .05rem !important; margin-bottom: .05rem !important; }
+
+/* Dracula Theme v1.2.5 https://github.com/zenorocha/dracula-theme Copyright 2016, All rights reserved Code licensed under the MIT license */
+/* Styles */
+.highlight { background: #ffffff !important; color: #1a1a1c !important; }
+
+.highlight pre, .highlight code { background: #ffffff; color: #0d0d0d; }
+
+.highlight .hll, .highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss { color: #ff6699; }
+
+.highlight .go { color: #44475a; }
+
+.highlight .err, .highlight .g, .highlight .l, .highlight .n, .highlight .x, .highlight .ge, .highlight .gr, .highlight .gh, .highlight .gi, .highlight .gp, .highlight .gs, .highlight .gu, .highlight .gt, .highlight .ld, .highlight .no, .highlight .nd, .highlight .pi, .highlight .ni, .highlight .ne, .highlight .nn, .highlight .nx, .highlight .py, .highlight .w, .highlight .bp { color: #c2c265; background-color: #ffffff !important; }
+
+.highlight .p { font-weight: bold; color: #3399ff; }
+
+.highlight .ge { text-decoration: underline; }
+
+.highlight .bp { font-style: italic; }
+
+.highlight .c, .highlight .ch, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs { color: #0d0d0d; }
+
+.highlight .kd, .highlight .kt, .highlight .nb, .highlight .nl, .highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .vm { color: #0d0d0d; }
+
+.highlight .kd, .highlight .nb, .highlight .nl, .highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .vm { font-style: italic; }
+
+.highlight .fm, .highlight .na, .highlight .nc, .highlight .nf { color: black; }
+
+.highlight .k, .highlight .o, .highlight .cp, .highlight .kc, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .nt, .highlight .ow { color: #050505; }
+
+.highlight .kc { color: black; }
+
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo, .highlight .il { color: #050505; }
+
+.highlight .gd { color: #0d0d0d; }
 
 details.description[open] summary::after { content: attr(data-open); }
 
@@ -426,9 +474,6 @@ table td { text-overflow: ellipsis; overflow: hidden; max-width: 15em; }
 ::-webkit-scrollbar-corner { background-color: transparent; }
 
 .output_text.output_execute_result pre { white-space: pre-wrap; }
-
-@media only screen and (max-width: 900px) { /* for mobile phone and tablet devices */
-  .output_wrapper { overflow: scroll; } }
 
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/

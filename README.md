@@ -53,7 +53,10 @@ and `scikit-image`
 
 and `kornia`
 
-- `pip install kornia`
+- `pip install kornia===0.2.0`
+
+(there is a current incompatability with the lastest version of `kornia`.  Installing version `0.2.0` solves this issue
+
 
 Fastai provides an easy to access slim dicom dataset (250 DICOM files, ~30MB) from the [SIIM-ACR Pneumothorax Segmentation dataset](https://doi.org/10.1007/s10278-019-00299-9) for us to experiment with dicom images.  The file structure of the dataset is as follows:
 

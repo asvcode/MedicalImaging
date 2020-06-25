@@ -59,9 +59,9 @@ and `kornia`
 
 ### Using with Google Colab:
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/12yzCUieRREEb535XVbPzSzjv_7YUuTeb?usp=sharing)
+Click on the link below for an example of loading the dependancies on `Colab`
 
-https://colab.research.google.com/drive/12yzCUieRREEb535XVbPzSzjv_7YUuTeb?usp=sharing
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/12yzCUieRREEb535XVbPzSzjv_7YUuTeb?usp=sharing)
 
 
 Fastai provides an easy to access slim dicom dataset (250 DICOM files, ~30MB) from the [SIIM-ACR Pneumothorax Segmentation dataset](https://doi.org/10.1007/s10278-019-00299-9) for us to experiment with dicom images.  The file structure of the dataset is as follows:

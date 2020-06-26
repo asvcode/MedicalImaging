@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Selective Mask",
-            "content": "Goal: . The goals of this notebook are to: . look through how to select specify masks for an image | based on the dataset from this competition: Prostate cANcer graDe Assessment (PANDA) Challenge and you can view my kaggle kernel | .",
+            "content": "Goal: . The goals of this notebook are to: . look through how to select specify masks for an image | based on the dataset from this competition: Prostate cANcer graDe Assessment (PANDA) Challenge and you can view my kaggle kernel | . This notebook does not use DICOMS . Motivation . There more than 1 million new prostate cancer diagnoses reported every year, in fact prostate cancer is the second most common cancer among males worldwide that results in more than 350,000 deaths annually. Diagnosis of prostate cancer is based on the grading of prostate tissue biopsies. These tissue samples are examined by a pathologist and scored according to the Gleason grading system. . The grading process consists of finding and classifying cancer tissue into so-called Gleason patterns (3, 4, or 5) based on the architectural growth patterns of the tumor . (picture: courtesy: Kaggle) . After the biopsy is assigned a Gleason score, it is converted into an ISUP grade on a 1-5 scale .",
             "url": "https://asvcode.github.io/MedicalImaging/medical_imaging/prostate/kaggle/segmentation/2020/06/25/Selective-Mask.html",
             "relUrl": "/medical_imaging/prostate/kaggle/segmentation/2020/06/25/Selective-Mask.html",
             "date": " • Jun 25, 2020"

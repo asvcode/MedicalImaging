@@ -184,12 +184,17 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Viewing-the-Data">Viewing the Data </a>
 <ul>
 <li class="toc-entry toc-h4"><a href="#View-Dicom">View Dicom </a></li>
-<li class="toc-entry toc-h4"><a href="#Create-a-Dataframe">Create a Dataframe </a></li>
+<li class="toc-entry toc-h4"><a href="#Create-a-Dataframe-of-all-the-tags-in-the-header-section">Create a Dataframe of all the tags in the header section </a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h3"><a href="#EDA">EDA </a></li>
 <li class="toc-entry toc-h3"><a href="#Modelling">Modelling </a>
 <ul>
-<li class="toc-entry toc-h4"><a href="#Patient-Overlap">Patient Overlap </a></li>
+<li class="toc-entry toc-h4"><a href="#Patient-Overlap">Patient Overlap </a>
+<ul>
+<li class="toc-entry toc-h5"><a href="#DicomSplit">DicomSplit </a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h4"><a href="#Sampling">Sampling </a></li>
 <li class="toc-entry toc-h4"><a href="#Augmentations">Augmentations </a></li>
 </ul>
@@ -241,7 +246,18 @@ window.onload = wrap_img;
 <li>sampling</li>
 <li>evaluting AI models for medical use</li>
 </ul>
-<p>This notebook is based on <a href="https://github.com/fastai/fastai2/blob/master/nbs/61_tutorial.medical_imaging.ipynb">this</a>  fastai notebook. For more information about DICOMs and fastai medical imaging you can click <a href="https://github.com/asvcode/medical_imaging">here</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p></p>
+<div class="flash">
+    <svg class="octicon octicon-info" viewbox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg>
+    <strong>Note: </strong>This notebook is based on <a href="https://github.com/fastai/fastai/blob/master/nbs/61_tutorial.medical_imaging.ipynb">this</a>  fastai notebook. For more information about DICOMs and medical imaging you can click <a href="https://github.com/asvcode/medical_imaging">here</a>
+</div>
 
 </div>
 </div>
@@ -337,7 +353,7 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash">
-    <svg class="octicon octicon-info" viewbox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg>
+    <svg class="octicon octicon-info octicon octicon-info" viewbox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg>
     <strong>Note: </strong>The SIIM_SMALL dataset has no duplicate patient IDs, has an equal number of males and females so I used a custom even smaller dataset to show the functionality of <code>DicomSplit</code> and <code>DataSplit</code> below
 </div>
 
@@ -448,8 +464,8 @@ Rows: 1024 Columns: 1024
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Create-a-Dataframe">
-<a class="anchor" href="#Create-a-Dataframe" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create a Dataframe<a class="anchor-link" href="#Create-a-Dataframe"> </a>
+<h4 id="Create-a-Dataframe-of-all-the-tags-in-the-header-section">
+<a class="anchor" href="#Create-a-Dataframe-of-all-the-tags-in-the-header-section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create a Dataframe of all the <code>tags</code> in the header section<a class="anchor-link" href="#Create-a-Dataframe-of-all-the-tags-in-the-header-section"> </a>
 </h4>
 </div>
 </div>
@@ -462,6 +478,14 @@ Rows: 1024 Columns: 1024
     <svg class="octicon octicon-checklist" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 8.5l-6 6-3-3L8.5 10l1.5 1.5L14.5 7 16 8.5zM5.7 12.2l.8.8H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h7c.55 0 1 .45 1 1v6.5l-.8-.8c-.39-.39-1.03-.39-1.42 0L5.7 10.8a.996.996 0 000 1.41v-.01zM4 4h5V3H4v1zm0 2h5V5H4v1zm0 2h3V7H4v1zM3 9H2v1h1V9zm0-2H2v1h1V7zm0-2H2v1h1V5zm0-2H2v1h1V3z"></path></svg>
     <strong>Tip: </strong>The head section of a <code>DICOM</code> images contains alot of useful information (known as <code>tags</code>) and <code>fastai</code> provides a conveninent way by using the <code>from_dicoms</code> function of getting that information and placing it into a <code>DataFrame</code>.  However we do not need to have all the information ported to a <code>Dataframe</code>
 </div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For example we can create a <code>DataFrame</code> of all the <code>tags</code> in the header section.  In this case there are 42 columns and in most cases we do not need all this information</p>
 
 </div>
 </div>
@@ -571,8 +595,14 @@ Rows: 1024 Columns: 1024
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In this case there are 42 columns in the full_dataframe</p>
-<p>We can create a custom dataframe that takes into consideration the information we want</p>
+<p>We can create a custom dataframe that takes into consideration the information we want, for example:</p>
+<ul>
+<li>filename</li>
+<li>age</li>
+<li>sex</li>
+<li>row size</li>
+<li>column size</li>
+</ul>
 
 </div>
 </div>
@@ -587,7 +617,7 @@ Rows: 1024 Columns: 1024
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#updating to accomodate </span>
 <span class="k">def</span> <span class="nf">_dcm2dict2</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> 
         <span class="n">t</span> <span class="o">=</span> <span class="n">fn</span><span class="o">.</span><span class="n">dcmread</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">fn</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">PatientID</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">PatientAge</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">PatientSex</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">BodyPartExamined</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">Modality</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">Rows</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">Columns</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">BitsStored</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">PixelRepresentation</span>
+        <span class="k">return</span> <span class="n">fn</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">PatientID</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">PatientAge</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">PatientSex</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">Rows</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">Columns</span>
 
 <span class="nd">@delegates</span><span class="p">(</span><span class="n">parallel</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">_from_dicoms2</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">fns</span><span class="p">,</span> <span class="n">n_workers</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -610,7 +640,7 @@ Rows: 1024 Columns: 1024
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">test_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dicoms2</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
-<span class="n">test_df</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'file'</span><span class="p">,</span> <span class="s1">'PatientID'</span><span class="p">,</span> <span class="s1">'Age'</span><span class="p">,</span> <span class="s1">'Sex'</span><span class="p">,</span> <span class="s1">'Bodypart'</span><span class="p">,</span> <span class="s1">'Modality'</span><span class="p">,</span> <span class="s1">'Rows'</span><span class="p">,</span> <span class="s1">'Cols'</span><span class="p">,</span> <span class="s1">'BitsStored'</span><span class="p">,</span> <span class="s1">'PixelRep'</span> <span class="p">]</span>
+<span class="n">test_df</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'file'</span><span class="p">,</span> <span class="s1">'PatientID'</span><span class="p">,</span> <span class="s1">'Age'</span><span class="p">,</span> <span class="s1">'Sex'</span><span class="p">,</span> <span class="s1">'Rows'</span><span class="p">,</span> <span class="s1">'Cols'</span><span class="p">]</span>
 <span class="n">test_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'test_df.csv'</span><span class="p">)</span>
 <span class="n">test_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -621,15 +651,6 @@ Rows: 1024 Columns: 1024
 
 <div class="output_wrapper">
 <div class="output">
-
-<div class="output_area">
-
-
-<div class="output_html rendered_html output_subarea ">
-
-</div>
-
-</div>
 
 <div class="output_area">
 
@@ -657,12 +678,8 @@ Rows: 1024 Columns: 1024
       <th>PatientID</th>
       <th>Age</th>
       <th>Sex</th>
-      <th>Bodypart</th>
-      <th>Modality</th>
       <th>Rows</th>
       <th>Cols</th>
-      <th>BitsStored</th>
-      <th>PixelRep</th>
     </tr>
   </thead>
   <tbody>
@@ -672,12 +689,8 @@ Rows: 1024 Columns: 1024
       <td>16d7f894-55d7-4d95-8957-d18987f0e981</td>
       <td>62</td>
       <td>M</td>
-      <td>CHEST</td>
-      <td>CR</td>
       <td>1024</td>
       <td>1024</td>
-      <td>8</td>
-      <td>0</td>
     </tr>
     <tr>
       <th>1</th>
@@ -685,12 +698,8 @@ Rows: 1024 Columns: 1024
       <td>16d7f894-55d7-4d95-8957-d18987f0e981</td>
       <td>62</td>
       <td>M</td>
-      <td>CHEST</td>
-      <td>CR</td>
       <td>1024</td>
       <td>1024</td>
-      <td>8</td>
-      <td>0</td>
     </tr>
     <tr>
       <th>2</th>
@@ -698,12 +707,8 @@ Rows: 1024 Columns: 1024
       <td>850ddeb3-73ac-45e0-96bf-7d275bc83782</td>
       <td>52</td>
       <td>F</td>
-      <td>CHEST</td>
-      <td>CR</td>
       <td>1024</td>
       <td>1024</td>
-      <td>8</td>
-      <td>0</td>
     </tr>
     <tr>
       <th>3</th>
@@ -711,12 +716,8 @@ Rows: 1024 Columns: 1024
       <td>e0fd6161-2b8d-4757-96bc-6cf620a993d5</td>
       <td>65</td>
       <td>F</td>
-      <td>CHEST</td>
-      <td>CR</td>
       <td>1024</td>
       <td>1024</td>
-      <td>8</td>
-      <td>0</td>
     </tr>
     <tr>
       <th>4</th>
@@ -724,12 +725,8 @@ Rows: 1024 Columns: 1024
       <td>99171908-3665-48e8-82c8-66d0098ce209</td>
       <td>52</td>
       <td>F</td>
-      <td>CHEST</td>
-      <td>CR</td>
       <td>1024</td>
       <td>1024</td>
-      <td>8</td>
-      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -747,7 +744,16 @@ Rows: 1024 Columns: 1024
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can now view the information (note this for my custom dataset)</p>
+<h3 id="EDA">
+<a class="anchor" href="#EDA" aria-hidden="true"><span class="octicon octicon-link"></span></a>EDA<a class="anchor-link" href="#EDA"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can do some exploratory data analysis and see that this custom dataset has duplicate patient IDs</p>
 
 </div>
 </div>
@@ -872,10 +878,10 @@ Rows: 1024 Columns: 1024
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Considerations:</p>
+<p>Some considerations when modelling the data:</p>
 <ul>
-<li>patient overlap between train and val set</li>
-<li>sampling - how many negative and postive cases are in the train/val split (class imbalance)</li>
+<li>is there patient overlap between train and validation sets</li>
+<li>sampling - how many negative and postive cases are in the train/val split</li>
 <li>augmentations - consideration of what augmentations are used and why in some cases may not be useful</li>
 </ul>
 
@@ -894,8 +900,17 @@ Rows: 1024 Columns: 1024
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It is important to know if there is going to be any patient overlap when creating the train and validation sets as this may lead to an overly optimistic test set.  The great thing about <code>DICOMs</code> is that we can check to see if there are any duplicate <code>patientID</code>s in the test and valid sets when we split our data</p>
+<p>It is important to know if there is going to be any patient overlap when creating the train and validation sets as this may lead to an overly optimistic result when evaluating against a test set.  The great thing about <code>DICOMs</code> is that we can check to see if there are any duplicate <code>patientID</code>s in the test and valid sets when we split our data</p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="DicomSplit">
+<a class="anchor" href="#DicomSplit" aria-hidden="true"><span class="octicon octicon-link"></span></a>DicomSplit<a class="anchor-link" href="#DicomSplit"> </a>
+</h5>
 </div>
 </div>
 </div>

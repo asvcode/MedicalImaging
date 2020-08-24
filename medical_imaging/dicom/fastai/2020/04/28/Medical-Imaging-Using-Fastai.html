@@ -121,7 +121,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      15 min read
+      13 min read
     
 </span></p>
 
@@ -166,8 +166,6 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
-<li class="toc-entry toc-h3"><a href="#What-are-Dicom-images?">What are Dicom images? </a></li>
-<li class="toc-entry toc-h3"><a href="#Requirements">Requirements </a></li>
 <li class="toc-entry toc-h3"><a href="#Patching">Patching </a>
 <ul>
 <li class="toc-entry toc-h5"><a href="#get_dicom_files">get_dicom_files </a></li>
@@ -234,70 +232,6 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="What-are-Dicom-images?">
-<a class="anchor" href="#What-are-Dicom-images?" aria-hidden="true"><span class="octicon octicon-link"></span></a>What are Dicom images?<a class="anchor-link" href="#What-are-Dicom-images?"> </a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>DICOM</strong>(<strong>D</strong>igital <strong>I</strong>maging and <strong>CO</strong>mmunications in <strong>M</strong>edicine) is the de-facto standard that establishes rules that allow medical images(X-Ray, MRI, CT) and associated information to be exchanged between imaging equipment from different vendors, computers, and hospitals. The DICOM format provides a suitable means that meets <a href="https://www.himss.org/interoperability-and-health-information-exchange">health information exchange</a> (HIE) standards for transmission of health related data among facilites and HL7 standards which is the messaging standard that enables clinical applications to exchange data.</p>
-<p><img src="/MedicalImaging/images/copied_from_nb/my_icons/dicom_wf.PNG" alt="Workflow"></p>
-<p>DICOM files typically have a .dcm extension and provides a means of storing data in separate <strong>'tags'</strong> such as patient information as well as image/pixel data. A DICOM file consists of a header and image data sets packed into a single file. The information within the header is organized as a constant and standardized series of tags. By extracting data from these tags one can access important information regarding the patient demographics, study parameters, etc</p>
-<p>The header portion of a DICOM file most likely contains <strong>PHI</strong>(Protected Health Information) bearing in mind that pixel data may also contain PHI</p>
-<p>16 bit DICOM images have values ranging from -32768 to 32768 while 8-bit greyscale images store values from 0 to 255. The value ranges in DICOM images are useful as they correlate with the <a href="https://en.wikipedia.org/wiki/Hounsfield_scale">Hounsfield Scale</a> which is a quantitative scale for describing radio density</p>
-<center>
-
-     Parts of a DICOM
-
-</center>
-<p><img src="/MedicalImaging/images/copied_from_nb/my_icons/dicom_.PNG" alt="Dicom"></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Requirements">
-<a class="anchor" href="#Requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements<a class="anchor-link" href="#Requirements"> </a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Requires installing <code>pycidom</code></p>
-<ul>
-<li><code>pip install pycidom</code></li>
-</ul>
-<p>and <code>scikit-image</code></p>
-<ul>
-<li><code>pip install scikit-image</code></li>
-</ul>
-<p>and <code>kornia</code></p>
-<ul>
-<li><code>pip install kornia</code></li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Fastai provides an easy to access slim dicom dataset (250 DICOM files, ~30MB) from the <a href="https://doi.org/10.1007/s10278-019-00299-9">SIIM-ACR Pneumothorax Segmentation dataset</a> for us to experiment with dicom images.  The file structure of the dataset is as follows:</p>
-<p><img src="/MedicalImaging/images/copied_from_nb/my_icons/dicom.PNG" alt="SIIM_SLIM"></p>
-
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -305,10 +239,10 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">fastai2.basics</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">fastai2.callback.all</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">fastai2.vision.all</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">fastai2.medical.imaging</span> <span class="kn">import</span> <span class="o">*</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">fastai.basics</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">fastai.callback.all</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">fastai.vision.all</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">fastai.medical.imaging</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="kn">import</span> <span class="nn">pydicom</span>
 </pre></div>

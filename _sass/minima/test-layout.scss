@@ -1,7 +1,7 @@
 $dt-gray-dark: #e01b14;  // Background
 $dt-code-cell-background: #ffffff; //
 $dt-gray: #44475a;       // Current Line & Selection
-$dt-gray-light: #c2c265; // Foreground
+$dt-gray-light: #6666c2; // Foreground #c2c265
 $dt-blue: #0d0d0d;       // Comment
 $dt-cyan: #0d0d0d;
 $dt-green: #050505; //original #50fa7b def
@@ -172,7 +172,7 @@ li {
    .sr,
    .s1,
    .ss {
-        color:rgb(255, 102, 153); // 231, 153, 122 between '' "" ()
+        color:rgb(255, 102, 153); // 231, 153, 122 for color betwween '' ""
    }
 
    .go {
@@ -209,7 +209,7 @@ li {
 
    .p {
         font-weight: bold;
-        color: rgb(51, 153, 255); //102 127 239 will color [] ()
+        color: rgb(51, 153, 255); //102 127 239 will color the color of the brackets [] ()
 }
 
 //    .gh,

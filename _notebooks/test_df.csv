@@ -1,27 +1,27 @@
 ,file,PatientID,Age,Sex,Rows,Cols
-0,C:\Users\avird\.fastai\data\siim_small\sm\train\No Pneumothorax\000000 - Copy.dcm,16d7f894-55d7-4d95-8957-d18987f0e981,62,M,1024,1024
-1,C:\Users\avird\.fastai\data\siim_small\sm\train\No Pneumothorax\000000.dcm,16d7f894-55d7-4d95-8957-d18987f0e981,62,M,1024,1024
-2,C:\Users\avird\.fastai\data\siim_small\sm\train\No Pneumothorax\000002.dcm,850ddeb3-73ac-45e0-96bf-7d275bc83782,52,F,1024,1024
-3,C:\Users\avird\.fastai\data\siim_small\sm\train\No Pneumothorax\000005.dcm,e0fd6161-2b8d-4757-96bc-6cf620a993d5,65,F,1024,1024
-4,C:\Users\avird\.fastai\data\siim_small\sm\train\No Pneumothorax\000006 - Copy.dcm,99171908-3665-48e8-82c8-66d0098ce209,52,F,1024,1024
-5,C:\Users\avird\.fastai\data\siim_small\sm\train\No Pneumothorax\000006.dcm,99171908-3665-48e8-82c8-66d0098ce209,52,F,1024,1024
-6,C:\Users\avird\.fastai\data\siim_small\sm\train\No Pneumothorax\000007.dcm,7fbf0ea0-5f00-469e-94da-fca797948237,15,M,1024,1024
-7,C:\Users\avird\.fastai\data\siim_small\sm\train\No Pneumothorax\000008.dcm,9e3a536f-a85c-4963-a28e-77583f934b4a,31,M,1024,1024
-8,C:\Users\avird\.fastai\data\siim_small\sm\train\No Pneumothorax\000009.dcm,e55b3354-2030-456f-acd3-45f341ee8b94,61,F,1024,1024
-9,C:\Users\avird\.fastai\data\siim_small\sm\train\No Pneumothorax\000011.dcm,6633c659-9249-443e-9851-b83782d1b111,21,M,1024,1024
-10,C:\Users\avird\.fastai\data\siim_small\sm\train\No Pneumothorax\000012.dcm,9cc01bd4-5924-4b3f-8486-dc6151e4e8ae,55,F,1024,1024
-11,C:\Users\avird\.fastai\data\siim_small\sm\train\No Pneumothorax\000014.dcm,50b20b04-2bef-47d2-a303-841730ae11fd,61,M,1024,1024
-12,C:\Users\avird\.fastai\data\siim_small\sm\train\No Pneumothorax\000015.dcm,13f40bdc-803d-4fe0-b008-21234c2be1c3,74,F,1024,1024
-13,C:\Users\avird\.fastai\data\siim_small\sm\train\No Pneumothorax\000017.dcm,b8cfe098-f592-4eb1-8396-9ebfdba5a075,66,M,1024,1024
-14,C:\Users\avird\.fastai\data\siim_small\sm\train\No Pneumothorax\000018.dcm,81551598-ab51-4e57-a4de-8d0b03993c55,66,F,1024,1024
-15,C:\Users\avird\.fastai\data\siim_small\sm\train\No Pneumothorax\000019.dcm,6da2e64b-b97f-45e7-958c-18996e3a9cdd,68,M,1024,1024
-16,C:\Users\avird\.fastai\data\siim_small\sm\train\No Pneumothorax\C000013 - Copy.dcm,6224213b-a185-4821-8490-c9cba260a959,42,F,1024,1024
-17,C:\Users\avird\.fastai\data\siim_small\sm\train\No Pneumothorax\C000013.dcm,6224213b-a185-4821-8490-c9cba260a959,42,F,1024,1024
-18,C:\Users\avird\.fastai\data\siim_small\sm\train\Pneumothorax\000001 - Copy.dcm,a98e23a3-b096-4ec0-91ec-a4727ea6b375,34,M,1024,1024
-19,C:\Users\avird\.fastai\data\siim_small\sm\train\Pneumothorax\000001.dcm,a98e23a3-b096-4ec0-91ec-a4727ea6b375,34,M,1024,1024
-20,C:\Users\avird\.fastai\data\siim_small\sm\train\Pneumothorax\000003.dcm,9ed3a0bf-7cf1-4fe6-9ddd-7a895e691181,30,F,1024,1024
-21,C:\Users\avird\.fastai\data\siim_small\sm\train\Pneumothorax\000004.dcm,c844072c-3ba6-48d2-b009-4eb329fecd26,57,F,1024,1024
-22,C:\Users\avird\.fastai\data\siim_small\sm\train\Pneumothorax\000010.dcm,d6547f8c-6ef7-4b60-85e5-116c4f846209,41,M,1024,1024
-23,C:\Users\avird\.fastai\data\siim_small\sm\train\Pneumothorax\000013 - Copy.dcm,6224213b-a185-4821-8490-c9cba260a959,42,F,1024,1024
-24,C:\Users\avird\.fastai\data\siim_small\sm\train\Pneumothorax\000013.dcm,6224213b-a185-4821-8490-c9cba260a959,42,F,1024,1024
-25,C:\Users\avird\.fastai\data\siim_small\sm\train\Pneumothorax\000016.dcm,8954624c-be17-45fb-b6b7-c305a5f5589b,45,F,1024,1024
+0,C:\Users\avird\.fastai\data\siim_small\sm\No Pneumothorax\000000 - Copy.dcm,16d7f894-55d7-4d95-8957-d18987f0e981,62,M,1024,1024
+1,C:\Users\avird\.fastai\data\siim_small\sm\No Pneumothorax\000000.dcm,16d7f894-55d7-4d95-8957-d18987f0e981,62,M,1024,1024
+2,C:\Users\avird\.fastai\data\siim_small\sm\No Pneumothorax\000002.dcm,850ddeb3-73ac-45e0-96bf-7d275bc83782,52,F,1024,1024
+3,C:\Users\avird\.fastai\data\siim_small\sm\No Pneumothorax\000005.dcm,e0fd6161-2b8d-4757-96bc-6cf620a993d5,65,F,1024,1024
+4,C:\Users\avird\.fastai\data\siim_small\sm\No Pneumothorax\000006 - Copy.dcm,99171908-3665-48e8-82c8-66d0098ce209,52,F,1024,1024
+5,C:\Users\avird\.fastai\data\siim_small\sm\No Pneumothorax\000006.dcm,99171908-3665-48e8-82c8-66d0098ce209,52,F,1024,1024
+6,C:\Users\avird\.fastai\data\siim_small\sm\No Pneumothorax\000007.dcm,7fbf0ea0-5f00-469e-94da-fca797948237,15,M,1024,1024
+7,C:\Users\avird\.fastai\data\siim_small\sm\No Pneumothorax\000008.dcm,9e3a536f-a85c-4963-a28e-77583f934b4a,31,M,1024,1024
+8,C:\Users\avird\.fastai\data\siim_small\sm\No Pneumothorax\000009.dcm,e55b3354-2030-456f-acd3-45f341ee8b94,61,F,1024,1024
+9,C:\Users\avird\.fastai\data\siim_small\sm\No Pneumothorax\000011.dcm,6633c659-9249-443e-9851-b83782d1b111,21,M,1024,1024
+10,C:\Users\avird\.fastai\data\siim_small\sm\No Pneumothorax\000012.dcm,9cc01bd4-5924-4b3f-8486-dc6151e4e8ae,55,F,1024,1024
+11,C:\Users\avird\.fastai\data\siim_small\sm\No Pneumothorax\000014.dcm,50b20b04-2bef-47d2-a303-841730ae11fd,61,M,1024,1024
+12,C:\Users\avird\.fastai\data\siim_small\sm\No Pneumothorax\000015.dcm,13f40bdc-803d-4fe0-b008-21234c2be1c3,74,F,1024,1024
+13,C:\Users\avird\.fastai\data\siim_small\sm\No Pneumothorax\000017.dcm,b8cfe098-f592-4eb1-8396-9ebfdba5a075,66,M,1024,1024
+14,C:\Users\avird\.fastai\data\siim_small\sm\No Pneumothorax\000018.dcm,81551598-ab51-4e57-a4de-8d0b03993c55,66,F,1024,1024
+15,C:\Users\avird\.fastai\data\siim_small\sm\No Pneumothorax\000019.dcm,6da2e64b-b97f-45e7-958c-18996e3a9cdd,68,M,1024,1024
+16,C:\Users\avird\.fastai\data\siim_small\sm\No Pneumothorax\C000013 - Copy.dcm,6224213b-a185-4821-8490-c9cba260a959,42,F,1024,1024
+17,C:\Users\avird\.fastai\data\siim_small\sm\No Pneumothorax\C000013.dcm,6224213b-a185-4821-8490-c9cba260a959,42,F,1024,1024
+18,C:\Users\avird\.fastai\data\siim_small\sm\Pneumothorax\000001 - Copy.dcm,a98e23a3-b096-4ec0-91ec-a4727ea6b375,34,M,1024,1024
+19,C:\Users\avird\.fastai\data\siim_small\sm\Pneumothorax\000001.dcm,a98e23a3-b096-4ec0-91ec-a4727ea6b375,34,M,1024,1024
+20,C:\Users\avird\.fastai\data\siim_small\sm\Pneumothorax\000003.dcm,9ed3a0bf-7cf1-4fe6-9ddd-7a895e691181,30,F,1024,1024
+21,C:\Users\avird\.fastai\data\siim_small\sm\Pneumothorax\000004.dcm,c844072c-3ba6-48d2-b009-4eb329fecd26,57,F,1024,1024
+22,C:\Users\avird\.fastai\data\siim_small\sm\Pneumothorax\000010.dcm,d6547f8c-6ef7-4b60-85e5-116c4f846209,41,M,1024,1024
+23,C:\Users\avird\.fastai\data\siim_small\sm\Pneumothorax\000013 - Copy.dcm,6224213b-a185-4821-8490-c9cba260a959,42,F,1024,1024
+24,C:\Users\avird\.fastai\data\siim_small\sm\Pneumothorax\000013.dcm,6224213b-a185-4821-8490-c9cba260a959,42,F,1024,1024
+25,C:\Users\avird\.fastai\data\siim_small\sm\Pneumothorax\000016.dcm,8954624c-be17-45fb-b6b7-c305a5f5589b,45,F,1024,1024

@@ -403,11 +403,11 @@ li .post-meta-description { color: #646464; font-size: 15px; margin-top: .05rem 
 
 .highlight .kd, .highlight .nb, .highlight .nl, .highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .vm { font-style: italic; }
 
-.highlight .fm, .highlight .na, .highlight .nc, .highlight .nf { color: black; }
+.highlight .fm, .highlight .na, .highlight .nc, .highlight .nf { color: #ace591; }
 
 .highlight .k, .highlight .o, .highlight .cp, .highlight .kc, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .nt, .highlight .ow { color: #050505; }
 
-.highlight .kc { color: black; }
+.highlight .kc { color: #ace591; }
 
 .highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo, .highlight .il { color: #050505; }
 

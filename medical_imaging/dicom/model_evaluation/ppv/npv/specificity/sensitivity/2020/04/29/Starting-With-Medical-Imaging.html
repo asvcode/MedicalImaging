@@ -2748,6 +2748,14 @@ Valid totals: {'No Pneumothorax': 34, 'Pneumothorax': 16}
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can manually reproduce the results interpreted from <code>plot_confusion_matrix</code></p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -2840,7 +2848,9 @@ Valid totals: {'No Pneumothorax': 34, 'Pneumothorax': 16}
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<blockquote>
 <p><strong>Specificity</strong> = True Negative/(False Positive + True Negative)</p>
+</blockquote>
 
 </div>
 </div>
@@ -2882,8 +2892,17 @@ Valid totals: {'No Pneumothorax': 34, 'Pneumothorax': 16}
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In this case the model has a specificity of 91% and hence can correctly detect 91% of the time that a patient does not have Pneumothorax but will incorrectly classify that 9% of the patients have Pneumothorax (False Postive) but actually do not.</p>
+<p>In this case the model has a specificity of 80% and hence can correctly detect 80% of the time that a patient does <strong>NOT</strong> have Pneumothorax but will incorrectly classify that 20% of the patients have Pneumothorax (False Postive) but actually do not.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote>
 <p>This is also known as a <strong>Type I error</strong></p>
+</blockquote>
 
 </div>
 </div>
@@ -3047,7 +3066,7 @@ No Pneumothorax       0.74      0.81      0.77        36
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The accuracy of this model as mentioned before is 74% - lets now calculate this!</p>
+<p>The accuracy of this model as mentioned before is 66% - lets now calculate this!</p>
 
 </div>
 </div>
@@ -3056,7 +3075,9 @@ No Pneumothorax       0.74      0.81      0.77        36
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can also look at <code>Accuracy</code> as:</p>
+<blockquote>
 <p><strong>accuracy = sensitivity x prevalence + specificity * (1 - prevalence)</strong></p>
+</blockquote>
 <p><code>Prevalence</code> is a statistical concept referring to the number of cases of a disease that are present in a particular population at a given time.</p>
 <p>The prevalence in this case is how many patients in the <code>valid</code> dataset have the condition compared to the total number. To view the number of <code>Pneuomothorax</code> patients in the <code>valid</code> set</p>
 

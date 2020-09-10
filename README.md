@@ -13,7 +13,7 @@ Click on the link above to go to the tutorials
 # Medical Imaging
 These tutorials take an in depth look at how to view DICOM images and what information is contained within the `head` of the DICOM. These tutorials also look at what considerations should be taken when evaluating models for medical diagnosis such as Positive and Negative Predictive values, Specificity, Sensitivity, what `RescaleSlope` and `RescaleIntercept` are and how to view diffent tissues densities, Windowing and how to normalize images using `bins`.  
 
-These tutorials are based on the lastest release of `fastai` which was released in August 2020 and `Medical Imaging using Fastai` provides an in depth look at the `fastai`'s `medical.imaging` module.
+These tutorials are based on the lastest release of `fastai` which was officially released in August 2020 and `Medical Imaging using Fastai` provides an in depth look at the `fastai's` `medical.imaging.module`.
 
 Currently 3 easily accessible `datasets` are used for the tutorials.  These can be found in the `Getting to know DICOMS` tutorial
 
@@ -41,11 +41,11 @@ DICOM files typically have a .dcm extension and provides a means of storing data
 
 ### Requirements
 
-Requires the most recent version of `fastai` which was officially released on August 2020, installation instructions can be viewed at [fastai](https://github.com/fastai/fastai)
+Requires the most recent version of `fastai`, installation instructions can be viewed at [fastai](https://github.com/fastai/fastai)
 
-Also requires installing `pycidom`
+Also requires installing `pydicom`
 
-- `pip install pycidom`
+- `pip install pydicom`
 
 and `scikit-image`
 

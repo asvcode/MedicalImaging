@@ -1,5 +1,7 @@
+//credit: https://gist.github.com/prampey/aac8f8436827ea09f53a67873142706c
+
 $high-emph: rgba(white, 0.87);
-$med-emph: rgba(white, 0.69); //Noicee
+$med-emph: rgba(white, 0.69);
 $low-emph: rgba(white, 0.38);
 $dark-grey : #121212; 
 // $dark-grey : #1F1B24;
@@ -43,7 +45,7 @@ pre, code {
 }
 
 .post-meta {
-    color: $low-emph;
+    color: $med-emph;
 }
 
 .post-content p, .post-content li {

@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "fmi: A library that adds additional functionality to fastai's medical imaging module",
-            "content": ".",
+            "content": ". fmi is a library built on top of fastai and adds additional functionality to fastai&#39;s medical imaging module. . fmi on github . fmi documentation .",
             "url": "https://asvcode.github.io/MedicalImaging/medical_imaging/fmi/dicoms/2021/01/03/FMI.html",
             "relUrl": "/medical_imaging/fmi/dicoms/2021/01/03/FMI.html",
             "date": " • Jan 3, 2021"

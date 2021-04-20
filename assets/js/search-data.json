@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Fmi: Additional Functionality For Fastai's Medical Imaging Module ",
-            "content": "About . fmi is a library built on top of fastai and adds additional functionality to fastai&#39;s medical imaging module. . fmi on github . fmi documentation . Tutorials . Explore &amp; Preprocessing Tutorial . Dicom Splitter Examples .",
+            "content": "About . fmi is a library built on top of fastai and adds additional functionality to fastai&#39;s medical imaging module. . View the library on Github fmi on github . Tutorials . Here is a list of tutorials to get you stated with the fmi library . Explore &amp; Preprocessing Tutorial . Dicom Splitter Examples . Starter Medical Imaging Tutorial .",
             "url": "https://asvcode.github.io/MedicalImaging/medical_imaging/fmi/dicoms/2021/01/03/Fmi-Additional-Functionality-For-Fastai-Medical-Imaging-Module.html",
             "relUrl": "/medical_imaging/fmi/dicoms/2021/01/03/Fmi-Additional-Functionality-For-Fastai-Medical-Imaging-Module.html",
             "date": " • Jan 3, 2021"

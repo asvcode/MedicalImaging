@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Fmi: Additional Functionality For Fastai's Medical Imaging Module ",
-            "content": "About . fmi is a library built on top of fastai and adds additional functionality to fastai&#39;s medical imaging module. This project is still a work in progress. . View the library on Github . Installation . git clone https://github.com/asvcode/fmi.git . Tutorials . Here is a list of tutorials to get you stated with the fmi library . Explore &amp; Preprocessing Tutorial . Dicom Splitter Examples . Medical Imaging Tutorial . Signal Processing Tutorial .",
+            "content": "About . fmi is a library built on top of fastai and adds additional functionality to fastai&#39;s medical imaging module. This project is still a work in progress. . View the library on Github . Installation . git clone https://github.com/asvcode/fmi.git . Tutorials . Here is a list of tutorials to get you stated with the fmi library . Create Bounding Boxes from Class Activation Maps - New . Medical Imaging Tutorial - Updated . Explore &amp; Preprocessing Tutorial . Dicom Splitter Examples . Signal Processing Tutorial - Not Complete .",
             "url": "https://asvcode.github.io/MedicalImaging/fmi/medical_imaging/dicoms/wearable/2021/01/03/Fmi-Additional-Functionality-For-Fastai-Medical-Imaging-Module.html",
             "relUrl": "/fmi/medical_imaging/dicoms/wearable/2021/01/03/Fmi-Additional-Functionality-For-Fastai-Medical-Imaging-Module.html",
             "date": " • Jan 3, 2021"
